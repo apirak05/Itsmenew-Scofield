@@ -1,0 +1,1736 @@
+</footer><!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Itsmenew Scofield</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================
+           RESET
+        ===================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background: #080808;
+            color: #eeeeea;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================
+           NAVIGATION
+        ===================================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 7%;
+
+            background: rgba(8, 8, 8, 0.94);
+
+            border-bottom: 1px solid rgba(212, 182, 108, 0.22);
+
+            backdrop-filter: blur(15px);
+        }
+
+        .logo {
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 25px;
+            font-weight: 500;
+
+            letter-spacing: 3px;
+
+            color: #f4f1e8;
+        }
+
+        .logo span {
+            color: #d6b86a;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 28px;
+
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #aaa9a3;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d8bb72;
+        }
+
+
+        /* =====================================
+           HERO
+        ===================================== */
+
+        .hero {
+            min-height: 92vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px 8%;
+
+            background:
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(174, 143, 65, 0.12),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #050505,
+                    #11110f 60%,
+                    #070707
+                );
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 550px;
+            height: 550px;
+
+            right: -250px;
+            top: 80px;
+
+            border: 1px solid rgba(214, 184, 106, 0.10);
+
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 700px;
+            height: 700px;
+
+            right: -330px;
+            top: -20px;
+
+            border: 1px solid rgba(214, 184, 106, 0.06);
+
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 70px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .small-title {
+            color: #c8aa61;
+
+            font-size: 12px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 15px;
+        }
+
+        .line {
+            width: 70px;
+            height: 2px;
+
+            background: #d2b568;
+
+            margin-bottom: 25px;
+        }
+
+        .hello {
+            color: #c6c4bd;
+
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Kanit', sans-serif;
+
+            font-size: clamp(55px, 7vw, 90px);
+
+            line-height: 0.95;
+
+            font-weight: 500;
+
+            letter-spacing: -2px;
+
+            color: #f4f1e8;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-text h1 span {
+            display: block;
+
+            color: #d4b667;
+
+            font-weight: 300;
+        }
+
+        .hero-text h2 {
+            font-size: 22px;
+
+            font-weight: 300;
+
+            color: #aaa9a3;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================
+           INFO
+        ===================================== */
+
+        .info-box {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+        .info {
+            padding: 7px 14px;
+
+            color: #c8c6bd;
+
+            font-size: 13px;
+
+            background: rgba(255, 255, 255, 0.03);
+
+            border: 1px solid rgba(214, 184, 106, 0.22);
+
+            border-radius: 4px;
+        }
+
+
+        /* =====================================
+           QUOTE
+        ===================================== */
+
+        .quote {
+            max-width: 650px;
+
+            color: #989791;
+
+            font-size: 14px;
+
+            border-left: 2px solid #b99a52;
+
+            padding-left: 18px;
+
+            margin-bottom: 30px;
+        }
+
+        .quote span {
+            color: #c7a95d;
+        }
+
+
+        /* =====================================
+           BUTTON
+        ===================================== */
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 11px 25px;
+
+            color: #080808;
+
+            background: #d4b667;
+
+            border: 1px solid #d4b667;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #f0d991;
+
+            transform: translateY(-3px);
+        }
+
+        .button-dark {
+            color: #d4b667;
+
+            background: transparent;
+
+            border-color: rgba(212, 182, 103, 0.45);
+        }
+
+        .button-dark:hover {
+            color: #080808;
+
+            background: #d4b667;
+        }
+
+
+        /* =====================================
+           HERO IMAGE
+        ===================================== */
+
+        .hero-image {
+            width: 390px;
+
+            position: relative;
+
+            flex-shrink: 0;
+        }
+
+        .hero-image::before {
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            top: 18px;
+            left: 18px;
+
+            border: 1px solid #a88945;
+
+            z-index: 0;
+        }
+
+        .hero-image img {
+            position: relative;
+
+            z-index: 2;
+
+            display: block;
+
+            width: 100%;
+            height: 520px;
+
+            object-fit: cover;
+
+            object-position: center top;
+
+            filter: brightness(0.85) contrast(1.05);
+
+            border: 1px solid rgba(214, 184, 106, 0.45);
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.65);
+        }
+
+        .image-number {
+            position: absolute;
+
+            right: -25px;
+            bottom: 25px;
+
+            z-index: 3;
+
+            padding: 8px 14px;
+
+            background: #11110f;
+
+            border: 1px solid rgba(214, 184, 106, 0.35);
+
+            color: #d4b667;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================
+           SECTION
+        ===================================== */
+
+        section {
+            padding: 110px 8%;
+        }
+
+        .section-heading {
+            max-width: 1100px;
+
+            margin: 0 auto 55px;
+        }
+
+        .section-heading span {
+            color: #a88b4a;
+
+            font-size: 13px;
+
+            letter-spacing: 4px;
+        }
+
+        .section-heading h2 {
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 42px;
+
+            font-weight: 400;
+
+            color: #f0eee7;
+
+            margin-top: 5px;
+        }
+
+        .section-heading p {
+            color: #77766f;
+
+            font-size: 11px;
+
+            letter-spacing: 4px;
+        }
+
+
+        /* =====================================
+           ABOUT
+        ===================================== */
+
+        #about {
+            background: #0d0d0c;
+
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .about-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr;
+
+            gap: 30px;
+        }
+
+        .about-text {
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151513,
+                    #0b0b0a
+                );
+
+            border: 1px solid rgba(214, 184, 106, 0.16);
+
+            border-radius: 4px;
+        }
+
+        .about-text p {
+            color: #aaa9a3;
+
+            margin-bottom: 22px;
+        }
+
+        .about-text strong {
+            color: #e0d8c3;
+        }
+
+        .about-card {
+            padding: 35px;
+
+            background: #121210;
+
+            border: 1px solid rgba(214, 184, 106, 0.20);
+
+            position: relative;
+        }
+
+        .card-number {
+            color: #987b3d;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+        }
+
+        .about-card h3 {
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 25px;
+
+            color: #e8e2d2;
+
+            margin-bottom: 22px;
+        }
+
+        .about-card p {
+            color: #999891;
+
+            padding: 9px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+
+        /* =====================================
+           HOBBY
+        ===================================== */
+
+        #hobby {
+            background: #080808;
+        }
+
+        .hobby-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .hobby-card {
+            padding: 38px 30px;
+
+            min-height: 280px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151513,
+                    #0b0b0a
+                );
+
+            border: 1px solid rgba(214, 184, 106, 0.15);
+
+            transition: 0.35s;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-8px);
+
+            border-color: rgba(214, 184, 106, 0.50);
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.45);
+        }
+
+        .hobby-icon {
+            font-size: 40px;
+
+            margin-bottom: 25px;
+        }
+
+        .hobby-card h3 {
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 24px;
+
+            color: #e6dfcc;
+
+            margin-bottom: 12px;
+        }
+
+        .hobby-card p {
+            color: #8f8e87;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================
+           SCOFIELD
+        ===================================== */
+
+        #scofield {
+            background:
+                radial-gradient(
+                    circle at center,
+                    #171613,
+                    #080808 65%
+                );
+        }
+
+        .scofield-card {
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 55px;
+
+            background: rgba(17, 17, 15, 0.90);
+
+            border: 1px solid rgba(214, 184, 106, 0.22);
+
+            position: relative;
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.45);
+        }
+
+        .scofield-title {
+            margin-bottom: 30px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+
+            padding-bottom: 25px;
+        }
+
+        .scofield-title span {
+            color: #a3884b;
+
+            font-size: 11px;
+
+            letter-spacing: 4px;
+        }
+
+        .scofield-title h3 {
+            font-family: 'Kanit', sans-serif;
+
+            color: #e5decc;
+
+            font-size: 30px;
+
+            margin-top: 5px;
+        }
+
+        .scofield-content p {
+            color: #a09f98;
+
+            margin-bottom: 20px;
+        }
+
+        .scofield-content strong {
+            color: #e0d6bd;
+        }
+
+        .meaning {
+            margin-top: 35px;
+
+            padding: 28px;
+
+            background: rgba(190, 155, 73, 0.07);
+
+            border-left: 3px solid #b0914c;
+        }
+
+        .meaning h4 {
+            font-family: 'Kanit', sans-serif;
+
+            color: #d5bd80;
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =====================================
+           EDUCATION
+        ===================================== */
+
+        #education {
+            background: #0d0d0c;
+        }
+
+        .education-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+        }
+
+        .education-card {
+            padding: 35px;
+
+            background: #121210;
+
+            border: 1px solid rgba(214, 184, 106, 0.17);
+
+            border-top: 2px solid #b0914c;
+        }
+
+        .education-title {
+            margin-bottom: 20px;
+        }
+
+        .education-title span {
+            color: #a3884b;
+
+            font-size: 10px;
+
+            letter-spacing: 3px;
+        }
+
+        .education-title h3 {
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 24px;
+
+            font-weight: 400;
+
+            color: #e4ddca;
+
+            margin-top: 5px;
+        }
+
+        .education-card > p {
+            color: #9b9a93;
+
+            margin-bottom: 5px;
+        }
+
+        .education-card strong {
+            color: #ddd3b9;
+        }
+
+        .education-gallery {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 10px;
+
+            margin-top: 25px;
+        }
+
+        .education-gallery img {
+            width: 100%;
+
+            height: 150px;
+
+            object-fit: cover;
+
+            border: 1px solid rgba(214, 184, 106, 0.22);
+
+            filter: brightness(0.78);
+
+            transition: 0.3s;
+        }
+
+        .education-gallery img:hover {
+            filter: brightness(1);
+
+            transform: scale(1.02);
+
+            border-color: #d4b667;
+        }
+
+
+        /* =====================================
+           CONTACT
+        ===================================== */
+
+        #contact {
+            background: #080808;
+        }
+
+        .contact-container {
+            max-width: 800px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+        .contact-card {
+            padding: 40px 30px;
+
+            text-align: center;
+
+            background: #121210;
+
+            border: 1px solid rgba(214, 184, 106, 0.17);
+
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(214, 184, 106, 0.50);
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.40);
+        }
+
+        .contact-icon {
+            font-size: 35px;
+
+            color: #d1b363;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-card > span {
+            color: #77766f;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+        }
+
+        .contact-card h3 {
+            color: #ddd8ca;
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            margin: 10px 0 18px;
+        }
+
+        .contact-card a {
+            color: #d1b363;
+
+            font-size: 13px;
+        }
+
+        .contact-card a:hover {
+            color: #f0d991;
+        }
+
+
+        /* =====================================
+           FOOTER
+        ===================================== */
+
+        footer {
+            padding: 40px 20px;
+
+            text-align: center;
+
+            background: #050505;
+
+            border-top: 1px solid rgba(214, 184, 106, 0.15);
+        }
+
+        .footer-logo {
+            font-family: 'Kanit', sans-serif;
+
+            font-size: 22px;
+
+            letter-spacing: 3px;
+
+            color: #e8e2d2;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: #d1b363;
+        }
+
+        footer p {
+            color: #696861;
+
+            font-size: 13px;
+
+            margin: 5px;
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 900px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 15px;
+
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 14px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            .hero-container {
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 55px;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .line {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                width: 75%;
+
+                max-width: 350px;
+            }
+
+            .hero-image img {
+                height: 450px;
+            }
+
+            .about-container,
+            .education-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hobby-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 80px 6%;
+            }
+
+            .hero-text h1 {
+                font-size: 55px;
+            }
+
+            .hero-image {
+                width: 85%;
+            }
+
+            .hero-image img {
+                height: 400px;
+            }
+
+            .section-heading h2 {
+                font-size: 34px;
+            }
+
+            .scofield-card {
+                padding: 28px 22px;
+            }
+
+            .about-text,
+            .about-card,
+            .education-card {
+                padding: 25px;
+            }
+
+            .education-gallery img {
+                height: 110px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<nav>
+
+    <div class="logo">
+        Itsmenew<span>®</span>
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#home">หน้าแรก</a>
+        </li>
+
+        <li>
+            <a href="#about">เกี่ยวกับฉัน</a>
+        </li>
+
+        <li>
+            <a href="#hobby">งานอดิเรก</a>
+        </li>
+
+        <li>
+            <a href="#scofield">Scofield</a>
+        </li>
+
+        <li>
+            <a href="#education">การศึกษา</a>
+        </li>
+
+        <li>
+            <a href="#contact">ติดต่อ</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =====================================
+     HOME
+===================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+
+        <div class="hero-text">
+
+            <div class="small-title">
+                PERSONAL PROFILE
+            </div>
+
+            <div class="line"></div>
+
+            <p class="hello">
+                👋🏻 สวัสดี
+            </p>
+
+            <h1>
+                Itsmenew
+                <span>Scofield</span>
+            </h1>
+
+            <h2>
+                นายอภิรักษ์ ทัสจันทร์
+            </h2>
+
+
+            <div class="info-box">
+
+                <div class="info">
+                    🌏 อิสมีนิว สกอฟิลด์
+                </div>
+
+                <div class="info">
+                    👤 อายุ 21 ปี
+                </div>
+
+                <div class="info">
+                    📍 ภูเก็ต
+                </div>
+
+            </div>
+
+
+            <p class="quote">
+
+                "อย่ารอให้ถึงวันเสาร์-อาทิตย์เพื่อที่จะมีความสุข
+                จงหาความสุขเล็กๆ ให้เจอในทุกวันธรรมดา"
+
+                <br>
+
+                <span>
+                    Cr. มารดา 🌱
+                </span>
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="button">
+                    รู้จักผมมากขึ้น
+                </a>
+
+                <a href="#contact" class="button button-dark">
+                    ติดต่อ
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="ph3.jpg"
+                alt="รูปโปรไฟล์ Itsmenew Scofield">
+
+            <div class="image-number">
+                01 / PROFILE
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     ABOUT
+===================================== -->
+
+<section id="about">
+
+    <div class="section-heading">
+
+        <span>01</span>
+
+        <h2>
+            เกี่ยวกับฉัน
+        </h2>
+
+        <p>
+            GET TO KNOW ME
+        </p>
+
+    </div>
+
+
+    <div class="about-container">
+
+
+        <div class="about-text">
+
+            <p>
+
+                สวัสดีครับ ผมชื่อ
+                <strong>นายอภิรักษ์ ทัสจันทร์</strong>
+                ชื่อเล่นว่า <strong>นิว</strong>
+                แต่สามารถเรียกผมว่า
+                <strong>สกอฟิลด์</strong>
+                หรือ <strong>อิสมีนิว สกอฟิลด์</strong>
+                ได้ครับ
+
+            </p>
+
+
+            <p>
+
+                นิวเป็นคนที่ชอบใช้เวลาว่างในการค้นคว้า
+                และเรียนรู้สิ่งใหม่ ๆ อยู่เสมอ
+                เพราะชอบใช้เวลาว่างค้นคว้าหาความรู้
+                และเข้าถึงประสบการณ์ที่ไม่เคยเจอ
+                ช่วยให้ได้เรียนรู้ความคิด ประวัติศาสตร์
+                หรือวัฒนธรรมของผู้คนจากยุคสมัย
+                และพื้นที่อื่น ๆ ผ่านมุมมองของผู้เขียน
+
+            </p>
+
+
+            <p>
+
+                นอกจากนี้ การอ่านยังช่วยฝึกสมาธิและการโฟกัส
+                เพราะต้องใช้ความตั้งใจจดจ่ออย่างต่อเนื่อง
+                ซึ่งช่วยดึงสมาธิกลับมาจากสภาวะ
+                สิ่งเร้าล้นเกิน (Digital Overload)
+                จากหน้าจอได้
+
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="card-number">
+                01
+            </div>
+
+            <h3>
+                สิ่งที่ผมสนใจ
+            </h3>
+
+            <p>
+                📚 การเรียนรู้และค้นคว้า
+            </p>
+
+            <p>
+                💻 เทคโนโลยีและคอมพิวเตอร์
+            </p>
+
+            <p>
+                🌱 ธรรมชาติและสิ่งแวดล้อม
+            </p>
+
+            <p>
+                🎬 ภาพยนตร์
+            </p>
+
+            <p>
+                🌿 การปลูกต้นไม้
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     HOBBY
+===================================== -->
+
+<section id="hobby">
+
+    <div class="section-heading">
+
+        <span>02</span>
+
+        <h2>
+            งานอดิเรก
+        </h2>
+
+        <p>
+            MY INTERESTS
+        </p>
+
+    </div>
+
+
+    <div class="hobby-container">
+
+
+        <div class="hobby-card">
+
+            <div class="hobby-icon">
+                📚
+            </div>
+
+            <h3>
+                อ่านหนังสือ
+            </h3>
+
+            <p>
+
+                ผมชอบใช้เวลาว่างในการอ่านหนังสือ
+                เพราะการอ่านช่วยให้ผมได้ค้นคว้า
+                และเรียนรู้ความรู้ใหม่ ๆ
+
+            </p>
+
+        </div>
+
+
+        <div class="hobby-card">
+
+            <div class="hobby-icon">
+                🌱
+            </div>
+
+            <h3>
+                ปลูกต้นไม้
+            </h3>
+
+            <p>
+
+                ผมรักธรรมชาติอยู่แล้ว
+                จึงชอบปลูกต้นไม้และดูแลพื้นที่สีเขียว
+                รวมถึงอยากมีส่วนช่วยอนุรักษ์สิ่งแวดล้อม
+
+            </p>
+
+        </div>
+
+
+        <div class="hobby-card">
+
+            <div class="hobby-icon">
+                🎬
+            </div>
+
+            <h3>
+                ดูหนัง
+            </h3>
+
+            <p>
+
+                ผมชอบดูหนังในเวลาว่าง
+                เพื่อความสนุก ผ่อนคลาย
+                และเปิดมุมมองใหม่ ๆ
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     SCOFIELD
+===================================== -->
+
+<section id="scofield">
+
+    <div class="section-heading">
+
+        <span>03</span>
+
+        <h2>
+            ทำไมถึงต้อง Scofield?
+        </h2>
+
+        <p>
+            MICHAEL SCOFIELD
+        </p>
+
+    </div>
+
+
+    <div class="scofield-card">
+
+
+        <div class="scofield-title">
+
+            <span>
+                THE STORY
+            </span>
+
+            <h3>
+                🏛 ที่มา
+            </h3>
+
+        </div>
+
+
+        <div class="scofield-content">
+
+
+            <p>
+
+                แรงบันดาลใจในชื่อของนิว
+                มาจากซีรีส์ระดับตำนานเรื่อง
+                <strong>Prison Break</strong>
+                (แผนแหกคุกมหาประการ)
+                ซึ่งถ่ายทอดเรื่องราวของ
+                <strong>ไมเคิล สกอฟิลด์ (Michael Scofield)</strong>
+                ชายหนุ่มผู้มีอัจฉริยภาพและไอคิวสูงลิ่ว
+
+            </p>
+
+
+            <p>
+
+                เรื่องราวเริ่มต้นขึ้นเมื่อ
+                ลินคอล์น เบอร์โรวส์ พี่ชายของเขา
+                ถูกกล่าวหาในคดีฆาตกรรมรองประธานาธิบดี
+                และต้องโทษประหารชีวิต ทั้งที่ไม่ได้ทำผิด
+                แต่มนุษย์ทุกคนมองว่าคุกแห่งนี้
+                ไม่มีทางแหกออกไปได้ ยกเว้นไมเคิล
+
+            </p>
+
+
+            <p>
+
+                ด้วยความฉลาด มีไหวพริบ
+                และแนวคิดที่แยบคายเกินคนทั่วไป
+                ไมเคิลจึงวางแผนการอันเหลือเชื่อ
+                และยอมสละชีวิตที่รุ่งโรจน์
+                รวมถึงอิสรภาพของตัวเอง
+                เพียงเพื่อเข้าไปช่วยพี่ชาย
+                ออกจากแดนประหาร
+
+            </p>
+
+
+            <p>
+
+                ตลอดทั้งเรื่อง ไมเคิลได้แสดงให้เห็นถึง
+                ความฉลาด การแก้ปัญหาเฉพาะหน้า
+                ภายใต้แรงกดดัน
+                และการอ่านเกมล่วงหน้าอย่างเหนือชั้น
+                จนสามารถนำพาทุกคนผ่านวิกฤต
+                ครั้งแล้วครั้งเล่าไปได้
+
+            </p>
+
+
+            <div class="meaning">
+
+                <h4>
+                    เหตุผลที่ชื่อนี้มีความหมายสำหรับนิว
+                </h4>
+
+
+                <p>
+
+                    คำว่า "สกอฟิลด์" จึงไม่ใช่แค่ชื่อตัวละคร
+                    แต่เป็นตัวแทนของความฉลาด
+                    กล้าคิดต่าง มีไหวพริบ
+                    และที่สำคัญที่สุดคือ
+                    ความรักและความเสียสละอันยิ่งใหญ่
+                    เพื่อครอบครัว
+
+                </p>
+
+
+                <p>
+
+                    นั่นคือเหตุผลที่ชื่อ
+                    <strong>อิสมีนิว สกอฟิลด์</strong>
+                    ถูกตั้งขึ้นมาเพื่อสะท้อนตัวตน
+                    และแนวคิดเหล่านี้ครับ
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     EDUCATION
+===================================== -->
+
+<section id="education">
+
+    <div class="section-heading">
+
+        <span>04</span>
+
+        <h2>
+            ประวัติการศึกษา
+        </h2>
+
+        <p>
+            MY EDUCATION
+        </p>
+
+    </div>
+
+
+    <div class="education-container">
+
+
+        <div class="education-card">
+
+            <div class="education-title">
+
+                <span>
+                    HIGH SCHOOL
+                </span>
+
+                <h3>
+                    🏫 ระดับมัธยมศึกษา
+                </h3>
+
+            </div>
+
+
+            <p>
+
+                <strong>
+                    โรงเรียนเฉลิมพระเกียรติ
+                    สมเด็จพระศรีนครินทร์ภูเก็ต
+                </strong>
+
+            </p>
+
+
+            <p>
+                แผนการเรียนภาษาอังกฤษ - ฝรั่งเศส
+            </p>
+
+
+            <div class="education-gallery">
+
+                <img
+                    src="ph6.png"
+                    alt="ผลงานมัธยมศึกษา 1">
+
+                <img
+                    src="ph8.jpg"
+                    alt="ผลงานมัธยมศึกษา 2">
+
+                <img
+                    src="ph5.png"
+                    alt="ผลงานมัธยมศึกษา 3">
+
+                <img
+                    src="ph7.jpg"
+                    alt="ผลงานมัธยมศึกษา 4">
+
+            </div>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <div class="education-title">
+
+                <span>
+                    UNIVERSITY
+                </span>
+
+                <h3>
+                    🎓 ระดับมหาวิทยาลัย
+                </h3>
+
+            </div>
+
+
+            <p>
+
+                <strong>
+                    มหาวิทยาลัยราชภัฏภูเก็ต
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                คณะวิทยาการจัดการ
+                สาขาคอมพิวเตอร์ธุรกิจ
+                และปัจจุบันกำลังศึกษาอยู่
+
+            </p>
+
+
+            <div class="education-gallery">
+
+                <img
+                    src="11.jpg"
+                    alt="ผลงานมหาวิทยาลัย 1">
+
+                <img
+                    src="เก็บขยะ พังงา.jpg"
+                    alt="ผลงานมหาวิทยาลัย 2">
+
+                <img
+                    src="รวมบนเรือ.jpg"
+                    alt="ผลงานมหาวิทยาลัย 3">
+
+                <img
+                    src="ภาพรวมอุทยาน.jpg"
+                    alt="ผลงานมหาวิทยาลัย 4">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     CONTACT
+===================================== -->
+
+<section id="contact">
+
+    <div class="section-heading">
+
+        <span>05</span>
+
+        <h2>
+            ช่องทางติดต่อ
+        </h2>
+
+        <p>
+            GET IN TOUCH
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                ◎
+            </div>
+
+            <span>
+                Instargram
+            </span>
+
+            <h3>
+                @itsmenewscf
+            </h3>
+
+            <a
+                href="https://www.instagram.com/itsmenewscf/"
+                target="_blank">
+
+                เปิด Instagram →
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                @
+            </div>
+
+            <span>
+                E-mail
+            </span>
+
+            <h3>
+                apirak6824@gmail.com
+            </h3>
+
+            <a
+                href="mailto:apirak6824@gmail.com">
+
+                ส่งอีเมล →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        Itsmenew<span>®</span>
+    </div>
+
+    <p>
+        🌱 ขอบคุณที่แวะเข้ามาเยี่ยมชมเว็บไซต์ของผมครับ
+    </p>
+
+    <p>
+        © 2026 Itsmenew Scofield
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
